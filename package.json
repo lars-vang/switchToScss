@@ -1,0 +1,48 @@
+{
+	"name": "switchtoscss",
+	"displayName": "SwitchToScss",
+	"publisher": "lvs",
+	"description": "Quickly switch between scss and js files with same name",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.45.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:switchtoscss.switchToRelevantFile",
+		"onCommand:switchtoscss.createClass",
+		"onCommand:switchtoscss.createRelevantFile"
+	],
+	"main": "./extension.js",
+	"contributes": {
+		"commands": [{
+            "command": "switchtoscss.switchToRelevantFile",
+            "title": "Switch to SCSS/JS"
+		}, {
+            "command": "switchtoscss.createClass",
+            "title": "Create class in relevant SCSS file"
+		}, {
+            "command": "switchtoscss.createRelevantFile",
+            "title": "Create SCSS file"
+		}]
+	},
+	"scripts": {
+		"lint": "eslint .",
+		"pretest": "npm run lint",
+		"test": "node ./test/runTest.js"
+	},
+	"devDependencies": {
+        "@types/vscode": "^1.45.0",
+        "@types/glob": "^7.1.1",
+        "@types/mocha": "^7.0.2",
+        "@types/node": "^13.11.0",
+        "eslint": "^6.8.0",
+        "glob": "^7.1.6",
+		"mocha": "^7.1.2",
+        "typescript": "^3.8.3",
+        "vscode-test": "^1.3.0"
+    }
+
+}
